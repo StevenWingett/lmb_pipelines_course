@@ -3,7 +3,7 @@
 # Course: Running Bioinformatics Software on a Linux Computer Cluster
 
 ## Licence
-This manual is © 2025, Steven Wingett
+This manual is © 2026, Steven Wingett
 
 This manual is distributed under the creative commons Attribution-Non-Commercial-Share Alike 2.0 licence. This means that you are free:
 
@@ -55,7 +55,7 @@ It is worth pointing out that since Nextflow is essentially a language to enable
 After establishing a syntax for describing bioinformatics workflows, the next goal for this community was to create pipelines for a range of NGS applications.  This endeavour is what became nf-core, essentially a repository of curated Nextflow pipelines.  These pipelines have pooled the opinions and efforts of experts on what constitutes best-practice in NGS processing.  The default settings should suit most standard protocols, but the pipelines have a wide range of options to accommodate different experimental procedures.
 
 Having a large community of people working on nf-core is advantageous, since many eyes on the code helps identify bugs or unexpected behaviours.  Reproducibility has also been at the forefront of this endeavour, and the project is under citable version control and uses containers to ensure consistent data processing.  These projects grew from academic institutions and so Nextflow and nf-core are open-source and free to use.  The nf-core homepage is found at:
-https://nf-co.re
+[https://nf-co.re](https://nf-co.re)
 
 We have made a selection of pipelines available on the LMB’s computer cluster.  Although not all the pipelines listed at nf-core are currently available here, we are willing to add more pipelines should there be demand from researchers.  Also, we may write and make available bespoke pipelines should the necessity arise.
 
@@ -67,17 +67,19 @@ Nextflow takes a little bit of setting up but we have tried to simplify this pro
 
     curl -s https://raw.githubusercontent.com/StevenWingett/lmb-nextflow/main/nextflow_setup_cluster.sh | bash
 
-You don’t need to know the details of what the script is doing, but you probably know enough by now to make sense of this step.  The curl command downloads an online script named nextflow_setup_cluster.sh.  The text from this file is written to standard out – which would by default be to your monitor screen.  However, this output is piped to bash.  So, in effect, this command runs the remote Bash script.
+You don’t need to know the details of what the script is doing, but you probably know enough by now to make sense of this step.  The curl command downloads an online script named `nextflow_setup_cluster.sh`.  The text from this file is written to standard out – which would by default be to your monitor screen.  However, this output is piped to bash.  So, in effect, this command runs the remote Bash script.
 
 If you run the curl command, but don’t pipe it to standard out, you will be able to view the contents of nextflow_setup_cluster.sh.  You will see that the script has three parts:
 
-i) set up Java (a requirement for Nextflow)
-ii) Nextflow setup
-iii) set up nf-core by installing Python3 (another programming language) modules.
+1. set up Java (a requirement for Nextflow)
 
-By now, the code in the Bash script should broadly make sense.  We would like to draw you attention to the lines of code involving ~/.bashrc.  This refers to a hidden file in your home directory (remember: the tilda (~) denotes the home folder and hidden files have names beginning with a full stop).  
+2. Nextflow setup
 
-This .bashrc file sets up you Bash configuration and is read by the Bash shell every time you log in.  You can see that this hidden file in your home folder:
+3. set up nf-core by installing Python3 (another programming language) modules.
+
+By now, the code in the Bash script should broadly make sense.  We would like to draw you attention to the lines of code involving `~/.bashrc`.  This refers to a hidden file in your home directory (remember: the tilda (~) denotes the home folder and hidden files have names beginning with a full stop).  
+
+This `.bashrc` file sets up you Bash configuration and is read by the Bash shell every time you log in.  You can see that this hidden file in your home folder:
 
     ls -a ~
 
@@ -86,17 +88,18 @@ View the contents of this configuration file:
     cat ~/.bashrc
 
 In this file you will see how the $PATH variable is set each time you login.  The relevant line begins: 
-export PATH=
 
-You need to edit this line to permanently add a location to the $PATH variable.  You will note that the downloaded Bash script added Nextflow to your path. 
+    export PATH=
+
+You need to edit this line to permanently add a location to the `$PATH` variable.  You will note that the downloaded Bash script added Nextflow to your path. 
 
 Run the following command:
 
     nextflow run hello
 
-Hello World! and other text should have been written to your screen.  If that didn’t work, log out of the cluster, log in again and re-try. 
+`Hello World!` and other text should have been written to your screen.  If that didn’t work, log out of the cluster, log in again and re-try. 
 
-Sorry that was little complicated, but you should only have to do this once.
+Sorry that was little complicated, but you should only have to do this once!
 
 ### Installed pipelines
 We shall now cover briefly the pipelines installed on the cluster.  We shan’t describe them in great detail since this information is already available in the official online documentation.
@@ -202,3 +205,25 @@ https://slurm.schedmd.com/documentation.html  – the official Slurm documentati
 https://www.mrc-lmb.cam.ac.uk/scicomp-new/index.php?id=computer-cluster – cluster documentation from Scientific Computing at the LMB
 
 Happy processing!
+
+
+Illumina Video
+
+GuidPiper Video
+https://www.youtube.com/watch?v=PPEneJfFsOI&t=335s
+
+
+
+
+[![Video](https://www.youtube.com/watch?v=PPEneJfFsOI&t=335s)
+
+
+https://img.youtube.com/vi/<PPEneJfFsOI&t=335s>/0.jpg
+
+ss
+
+
+[![Little red riding hood](https://img.youtube.com/vi/PPEneJfFsOI&t=335s/1.jpg)](https://vimeo.com/3514904 "Little red riding hood - Click to Watch!")]
+
+
+
