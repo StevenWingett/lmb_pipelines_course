@@ -47,7 +47,7 @@ Then copy to local machine
 #### b
 Get from GUIde piper:
 
-`nextflow run nf-core/fetchngs -r 1.7 --input to_download.txt -config /public/singularity/containers/nextflow/lmb-nextflow/lmb.config -queue-size 4 --outdir results -bg`
+`nextflow run nf-core/fetchngs -r 1.12.0 --input to_download.csv --download_method sratools -config /public/singularity/containers/nextflow/lmb-nextflow/lmb.config -queue-size 4 --outdir results -bg`
 
 #### c
 `wget -L https://raw.githubusercontent.com/nf-core/rnaseq/master/bin/fastq_dir_to_samplesheet.py`

@@ -144,15 +144,8 @@ Suppose you have received the results of a paired-end, non-strand specific *Sacc
         yeast_rna_seq_B_1.fastq.gz
         yeast_rna_seq_B_2.fastq.gz
 
-<i>[These are actually “toy” datasets which contain only a fraction of the original data in order to enable processing within the timeframe of the course.
+These are actually “toy” datasets which contain only a fraction of the original data in order to enable processing within the timeframe of the course.  If you have not been given these files by the course instructor, you can create them yourself - see footnote and the end of this document.
 
-**If you have not been given these files by the course instructor, you can create them yourself.**
-
-Sample A and B refer to accessions SRR3567555 and SRR3567679 respectively.  Download them using the nf-core pipeline used previously.  Then, subset the files by extracting the first 100,000 reads from each.  I recommend using `zcat` in conjunction with `head` to do this:*
-
-zcat file.fastq.gz | head -40000 > yeast_rna_seq_A_1.fastq.gz
-
-(Typically I would not recommend subsetting a FASTQ file by extracting reads only from the start of the file since this may introduce biases, but for testing purposes this approach is fine.)]</i>
 
 Process these datasets with the appropriate nf-core pipeline and settings.  To do this, read the nf-core documentation about the RNA-seq pipeline.  Then create a command using GUIde-Piper to process the RNA-seq datasets.
 
@@ -181,3 +174,16 @@ Let’s look at some more of the files we have produced.
 2. Can you find the BAM files?  Are you able to browse them using the command line?
 
 3. View the file `salmon.merged.gene_tpm.tsv`.  Can you work out what is contained in here?
+
+<hr>
+
+### Footnote - making Sample A/B files
+
+Sample A and B refer to accessions SRR3567555 and SRR3567679 respectively.  Download them using the nf-core pipeline used previously.  Then, subset the files by extracting the first 100,000 reads from each.  I recommend using `zcat` in conjunction with `head` to do this:*
+
+        zcat SRX1790985_SRR3567555_1.fastq.gz | head -400000 | gzip > yeast_rna_seq_A_1.fastq.gz
+        zcat SRX1790985_SRR3567555_2.fastq.gz | head -400000 | gzip > yeast_rna_seq_A_2.fastq.gz
+        zcat SRX1791046_SRR3567679_1.fastq.gz | head -400000 | gzip > yeast_rna_seq_B_1.fastq.gz
+        zcat SRX1791046_SRR3567679_2.fastq.gz | head -400000 | gzip > yeast_rna_seq_B_2.fastq.gz
+
+Typically I would not recommend subsetting a FASTQ file by extracting reads only from the start of the file since this may introduce biases, but for testing purposes this approach is fine.
