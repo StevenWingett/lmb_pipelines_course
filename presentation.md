@@ -1,7 +1,6 @@
 ---
 marp: true
 theme: uncover
-
 ---
 
 ![width:500px](assets/lmb_logo.png)
@@ -197,7 +196,7 @@ table {
 
 * **FASTQ files cannot be replaced**
   
-* **Copy these file to secure and backed up location**  
+* **Copy these file to a secure and backed-up location**  
   
 * Typically files are backed up on `/istore` or `/isilon`
   
@@ -224,6 +223,8 @@ table {
 * Each read is mapped to a reference genome
 * Key NGS step in most applications
 
+<br>
+
 ![width:1000px](assets/mapper.svg)
 
 ---
@@ -247,18 +248,12 @@ table {
 
 ---
 
-## What are bioinformatics pipelines?
-* NGS datasets require multiple software applications to evaluate the data
+## NGS bioinformatics processing
+* NGS datasets require multiple independently developed to evaluate the data
 
-![bg right 50%](assets/generalised_ngs_pipeline.svg)
+* Data needs to flow from one tool another
 
----
-
-## What are bioinformatics pipelines? (2)
-
-* Not usually performed by one multi-purpose program 
-
-* Series of independently developed software tools
+![bg right 100%](assets/generalised_ngs_pipeline.svg)
 
 ---
 
@@ -266,16 +261,23 @@ table {
 
 * Bioinformaticians join software with custom scripts
 
-* Movement to standardise pipelines with Nextflow (and Snakemake)
+* Movement to standardise pipelines with **Nextflow** (and Snakemake)
 
-* But, you don’t need to program to be able to run Nextflow
-You have to learn Nextflow concepts, but then it is managed for you
+* But, you don’t need to program to be able to run Nextflow
+  
+* You have to learn Nextflow concepts, but then processing is managed for you
 
 ---
 
 ## Introducing Nextflow (2)
 
-* You don’t need to submit Nextflow jobs as `sbatch` commands, just run them from the headnode
+* You don’t need to submit Nextflow jobs as `sbatch`
+
+* Run Nextflow on a head node 
+
+* Nextflow runs as a daemon process on a head node
+
+* Nextflow farms out jobs to compute nodes 
 
 * https://nextflow.io 
 
@@ -318,17 +320,15 @@ You have to learn Nextflow concepts, but then it is managed for you
 ---
 
 ## Installed pipelines
-
-* Currently available:
-  * Downloading FASTQ files + metadata
-  * NGS QC
-  * RNA-seq
-  * ChIP-seq
-  * ATAC-seq
-  * Cut and Tag / Run
-  * 10x Single Cell RNA-seq
-  * Parse Evercode Single Cell RNA-seq
-  * Taxonomy Profiling
+* Downloading FASTQ files + metadata
+* NGS QC
+* RNA-seq
+* ChIP-seq
+* ATAC-seq
+* Cut and Tag / Run
+* 10x Single Cell RNA-seq
+* Parse Evercode Single Cell RNA-seq
+* Taxonomy Profiling
 
 ---
 
@@ -348,7 +348,7 @@ You have to learn Nextflow concepts, but then it is managed for you
 
 * All pipelines are different: read the documentation at nf-core
 
-* Run pipelines in the `/cephfs2/ngs` partition (create a folder named after your username here)
+* Run pipelines in a location with adequate storage (most likely not your home directory)
 
 * Background your pipelines `-bg`
 
@@ -358,7 +358,7 @@ You have to learn Nextflow concepts, but then it is managed for you
 
 ## Tips on running pipelines (2)
 
-* You will get an email
+* You will get an email when the pipeline completes
   
 * Check the MultiQC report
   
@@ -387,7 +387,7 @@ You have to learn Nextflow concepts, but then it is managed for you
 
 ---
 
-## Exercise
+## Exercise 2
 
 ---
 
@@ -406,10 +406,11 @@ You have to learn Nextflow concepts, but then it is managed for you
 ---
 
 ## Publishing Data
+
 * There are public data repositories for uploading data (e.g. GEO: https://www.ncbi.nlm.nih.gov/geo)
 
 * Journals require the original FASTQ files to be submitted
-* **WARNING! : No FASTQ files, no publication!**
+* **WARNING! : No FASTQ files, no publication!**</p>
 
 ---
 
