@@ -1,6 +1,6 @@
 ![alt text](assets/lmb_logo.png)
 
-This course is intended to teach the basics of running Nextflow pipelines on the LMB Computer CLuster.  Although the material refers to the setup at the MRC-LMB (in Cambridge, UK), the general concepts are applicable to a multiplicity of different setups. The course comprises 5 sections:
+This course is intended to teach the basics of running Nextflow pipelines on the LMB Computer CLuster.  Although the material refers to the setup at the MRC-LMB (in Cambridge, UK), the general concepts are applicable to a multiplicity of different setups. The course comprises 2 sections:
 
 1.	[Next-generation sequencing – a brief overview of NGS technologies and the associated file types.](1_Next_generation_sequencing.md)
 

@@ -216,10 +216,8 @@ table {
 
 ---
 
-
-
 ## Mapping Reads
-* Converts raw sequence data to genomic poistion
+* Converts raw sequence data to genomic positions
 * Each read is mapped to a reference genome
 * Key NGS step in most applications
 
@@ -229,7 +227,7 @@ table {
 
 ---
 
-## File Formats – SAM / BAM (2)
+## Mapping output SAM / BAM
 
 * Read alignments (1 read shown below):
 
@@ -387,6 +385,37 @@ table {
 
 ---
 
+## Pipeline output
+
+* Clear, consistent output
+  
+* Pipeline execution reports
+  
+* Always check QC for problems!
+
+![bg right 100%](assets/fastqc_quality.png)
+
+---
+
+## Pipeline output (2)
+
+* Various other metrics reported, such as mapping efficiency
+
+![width:750px](assets/star_mapping_efficiency.png)
+
+---
+
+## Pipeline output (3)
+
+* Common output data include:
+  * Gene expression matrix (RNA-seq)
+  * Peak positions (ATAC/ChIP-seq, CUT & Tag/Run)
+  * IGV file for viewing results
+  
+---
+
+
+
 ## Exercise 2
 
 ---
@@ -410,7 +439,8 @@ table {
 * There are public data repositories for uploading data (e.g. GEO: https://www.ncbi.nlm.nih.gov/geo)
 
 * Journals require the original FASTQ files to be submitted
-* **WARNING! : No FASTQ files, no publication!**</p>
+  
+* **WARNING! : No FASTQ files, no publication!**
 
 ---
 
