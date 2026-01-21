@@ -10,7 +10,9 @@ theme: uncover
 
 ## Course aims
 * Introduction to analysing next-generation sequencing (NGS) data
+  
 * Learn about bioinformatics pipelines
+  
 * Run Nextflow & nf-core
 
 ---
@@ -21,9 +23,15 @@ theme: uncover
 * You should know how to use Linux
 
 * You should know how to submit jobs to a Slurm computer cluster
+ 
+---
 
-* If you do not meet these requirements then try the cluster course: https://github.com/StevenWingett/Bioinformatics_Computer_Cluster_Course
+* If you do not meet these requirements, try our LMB Computer Cluster Course: 
+ 
+    https://github.com/StevenWingett/Bioinformatics_Computer_Cluster_Course
   
+![bg right 90%](https://raw.githubusercontent.com/StevenWingett/Bioinformatics_Computer_Cluster_Course/refs/heads/main/assets/qr-code.png)
+
 ---
 
 # Part 1: Next generation sequencing
@@ -212,7 +220,7 @@ table {
 
 * **Members of Cell Biology should back up data there**
   
-* Contact Steven Wingett or Tim Stevens**
+* Contact **Steven Wingett** or **Tim Stevens**
 
 ---
 
@@ -238,8 +246,11 @@ table {
     https://samtools.github.io/hts-specs/SAMv1.pdf
 
 ---
+
 ## Exercise 1
+
 ---
+
 
 ## Part 2
 ### Nextflow bioinformatics pipelines
@@ -414,8 +425,6 @@ table {
   
 ---
 
-
-
 ## Exercise 2
 
 ---
@@ -446,9 +455,17 @@ table {
 
 ## Summary
 
-* Explained Illumina sequencing
-* Nextflow, a language for building and running pipelines
-* nf-core, a collection of curated bioinformatics pipelines
+* How Illumina sequencing works
+* Nextflow: a language for building and running pipelines
+* nf-core: a collection of curated bioinformatics pipelines
 * How to run pipelines
-* Find a reason to have a go in the coming weeks
+* Find a reason to **have a go** in the coming weeks
 * Thanks for listening!!!
+
+---
+
+## Course web link
+
+* https://stevenwingett.github.io/lmb_pipelines_course
+
+![bg right 90%](assets/lmb_pipelines_course_qr-code.png)
