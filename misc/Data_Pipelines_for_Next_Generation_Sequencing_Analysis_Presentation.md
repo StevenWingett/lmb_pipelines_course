@@ -3,12 +3,12 @@ marp: true
 theme: uncover
 ---
 
-![width:500px](assets/lmb_logo.png)
-# Course: Running Next Generation Sequencing Pipelines on a Computer Cluster
+![width:500px](../assets/lmb_logo.png)
+# Data Pipelines for Next Generation Sequencing Analysis
 
 ---
 
-## Course aims
+## Talk overview
 * Introduction to analysing next-generation sequencing (NGS) data
   
 * Learn about bioinformatics pipelines
@@ -17,24 +17,9 @@ theme: uncover
 
 ---
 
-## Prerequisites
-* You will need to be registered to gain access to the cluster 
 
-* You should know how to use Linux
 
-* You should know how to submit jobs to a Slurm computer cluster
- 
----
-
-* If you do not meet these requirements, try our LMB Computer Cluster Course: 
- 
-    https://github.com/StevenWingett/Bioinformatics_Computer_Cluster_Course
-  
-![bg right 90%](https://raw.githubusercontent.com/StevenWingett/Bioinformatics_Computer_Cluster_Course/refs/heads/main/assets/qr-code.png)
-
----
-
-# Part 1: Next generation sequencing
+# Next generation sequencing
 ### What it is, its applications and data types
 
 ---
@@ -46,8 +31,8 @@ theme: uncover
 * Illumina platform most commonly used – very high throughput
 
 * PacBio or Oxford Nanopore – longer reads but less throughput
-
-![width:250px](assets/MiSeq-300x225.png)
+  
+![width:250px](../assets/MiSeq-300x225.png)
 
 ---
 
@@ -92,7 +77,7 @@ table {
 
 ##### Illumina sequencing process - cluster generation
 
-![bg right 100% Image courtesy of Abizar, Wikipedia](assets/DNA_Sequencing_Bridge_Amplification.png)  
+![bg right 100% Image courtesy of Abizar, Wikipedia](../assets/DNA_Sequencing_Bridge_Amplification.png)  
 
 * Flowcell
 * Lanes
@@ -103,7 +88,7 @@ table {
 
 ##### Illumina sequencing process - sequencing by synthesis
 
-![bg right 100% Image courtesy of courtesy of DMLapato, Wikipedia](assets/Sequence_By_Synthesis.png)
+![bg right 100% Image courtesy of courtesy of DMLapato, Wikipedia](../assets/Sequence_By_Synthesis.png)
 
 * Fluorescent tag 
 
@@ -117,7 +102,7 @@ table {
 
 * Paired-end / single end
   <br>
-![width:900px](assets/single_paired_end_sequencing.png)
+![width:900px](../assets/single_paired_end_sequencing.png)
 
 ---
 
@@ -137,7 +122,7 @@ table {
 
 ## Illumina Sequencing Adapters
 
-![width:900px](assets/illumina_sequencing_adapters.png)
+![width:900px](../assets/illumina_sequencing_adapters.png)
 
 ---
 
@@ -168,7 +153,7 @@ table {
 * Quality defined as:
   $$-10\log_{10}p$$
 
-(in which p is the probability the base call is incorrect)
+(in which *p* is the probability the base call is incorrect)
 
 ---
 
@@ -230,7 +215,7 @@ table {
 
 <br>
 
-![width:1000px](assets/mapper.svg)
+![width:1000px](../assets/mapper.svg)
 
 ---
 
@@ -239,20 +224,15 @@ table {
 * Read alignments (1 read shown below):
 
 
-![width:1000px](assets/sam_format.png)
+![width:1000px](../assets/sam_format.png)
 
 *  SAM format specification described here:
     https://samtools.github.io/hts-specs/SAMv1.pdf
 
 ---
 
-## Exercise 1
-
----
-
-
-## Part 2
-### Nextflow bioinformatics pipelines
+# Nextflow bioinformatics pipelines
+### What they are, and how to run them
 
 ---
 
@@ -261,7 +241,7 @@ table {
 
 * Data needs to flow from one tool another
 
-![bg right 100%](assets/generalised_ngs_pipeline.svg)
+![bg right 100%](../assets/generalised_ngs_pipeline.svg)
 
 ---
 
@@ -293,7 +273,7 @@ table {
 
 <br>
 
-![width:400px](assets/nextflow_logo.png)
+![width:400px](../assets/nextflow_logo.png)
 
 ---
 
@@ -309,7 +289,7 @@ table {
 
 <br>
 
-![width:400px](assets/nf_core_logo.png)
+![width:400px](../assets/nf_core_logo.png)
 
 ---
 
@@ -323,7 +303,7 @@ table {
 
 <br>
 
-![width:650px](assets/nf_core_community.png)
+![width:650px](../assets/nf_core_community.png)
 
 ---
 
@@ -337,6 +317,23 @@ table {
 * 10x Single Cell RNA-seq
 * Parse Evercode Single Cell RNA-seq
 * Taxonomy Profiling
+
+---
+
+## Prerequisites
+* You will need to be registered to gain access to the cluster 
+
+* You should know how to use Linux
+
+* You should know how to submit jobs to a Slurm computer cluster
+ 
+---
+
+* If you do not meet these requirements, try our LMB Computer Cluster Course: 
+ 
+    https://github.com/StevenWingett/Bioinformatics_Computer_Cluster_Course
+  
+![bg right 90%](https://raw.githubusercontent.com/StevenWingett/Bioinformatics_Computer_Cluster_Course/refs/heads/main/assets/qr-code.png)
 
 ---
 
@@ -403,7 +400,7 @@ table {
   
 * Always check QC for problems!
 
-![bg right 100%](assets/fastqc_quality.png)
+![bg right 100%](../assets/fastqc_quality.png)
 
 ---
 
@@ -411,7 +408,7 @@ table {
 
 * Various other metrics reported, such as mapping efficiency
 
-![width:750px](assets/star_mapping_efficiency.png)
+![width:750px](../assets/star_mapping_efficiency.png)
 
 ---
 
@@ -422,24 +419,6 @@ table {
   * Peak positions (ATAC/ChIP-seq, CUT & Tag/Run)
   * IGV file for viewing results
   
----
-
-## Exercise 2
-
----
-
-## Troubleshooting
-
-* More than 90% full – Nextflow will fail!
-
-* `df -H | grep [partition name]`
-
-* Maybe use home directory?
-
-* Checkpoints
-
-* `-resume`
-
 ---
 
 ## Publishing Data
@@ -467,4 +446,4 @@ table {
 
 * https://stevenwingett.github.io/lmb_pipelines_course
 
-![bg right 90%](assets/lmb_pipelines_course_qr-code.png)
+![bg right 90%](../assets/lmb_pipelines_course_qr-code.png)
