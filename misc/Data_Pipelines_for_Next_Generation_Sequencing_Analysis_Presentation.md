@@ -6,18 +6,19 @@ theme: uncover
 ![width:500px](../assets/lmb_logo.png)
 # Data Pipelines for Next Generation Sequencing Analysis
 
+<hr>
+
+### Steven Wingett
 ---
 
 ## Talk overview
-* Introduction to analysing next-generation sequencing (NGS) data
+* Introducing next generation sequencing (NGS)
   
-* Learn about bioinformatics pipelines
+* Bioinformatics pipelines
   
-* Run Nextflow & nf-core
+* Running Nextflow & nf-core
 
 ---
-
-
 
 # Next generation sequencing
 ### What it is, its applications and data types
@@ -30,13 +31,13 @@ theme: uncover
 
 * Illumina platform most commonly used – very high throughput
 
-* PacBio or Oxford Nanopore – longer reads but less throughput
+* PacBio or Oxford Nanopore – longer reads but reduced throughput and accuracy
   
 ![width:250px](../assets/MiSeq-300x225.png)
 
 ---
 
-## Common types of analysis
+## Common NGS protocols
 * Whole-genome sequencing
 * RNA-seq
 * ChIP-seq
@@ -49,16 +50,16 @@ theme: uncover
 
 ---
 
-## Bulk vs Single Cell
+## Bulk vs single cell
 * Bulk is easier and cheaper to perform
 * Bulk gives global averages
 * Bulk allows comparisons between different samples, tissues etc.
 * Single cell reveals cell heterogeneity
-* Single cell reveal rare cell types and transitions
+* Single cell reveals rare cell types and transitions
 
 ---
 
-## Common Sequencers
+## Common sequencers
 
 <style scoped>
 table {
@@ -94,11 +95,11 @@ table {
 
 * Reversible terminator
 
-* Record colour of fluorescent emissions 
+* Detect colour of fluorescent emissions 
 
 ---
 
-## Other NGS terms
+## Useful NGS terminology
 
 * Paired-end / single end
   <br>
@@ -106,7 +107,7 @@ table {
 
 ---
 
-## Other NGS terms (2)
+## Useful NGS terminology (2)
 
 * Barcodes
   * multiplexing
@@ -120,17 +121,17 @@ table {
 
 ---
 
-## Illumina Sequencing Adapters
+## Illumina sequencing adapters
 
 ![width:900px](../assets/illumina_sequencing_adapters.png)
 
 ---
 
-## File formats – FASTQ
+## FASTQ file format 
 
 * Standard sequencer output
 
-* Text files, but normally gzipped
+* Text files, but normally **gzipped**
 
 <br>
   
@@ -141,9 +142,9 @@ table {
 
 ---
 
-## File formats – FASTQ 2
+## FASTQ file format (2)
 
-* Explanation of quality scores – higher score better quality
+* **Higher score better quality**
 
         Character: !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHI
                    |                                       |
@@ -157,38 +158,19 @@ table {
 
 ---
 
-## File Formats – SAM / BAM
-
-* Sequence Alignment / Map – SAM
-
-* Compressed version – BAM
-
-* Reading BAM files needs samtools
-
-* Header lines (information on mapping parameters):
-
-<br>
-
-      @HD	VN:1.6	SO:coordinate
-      @SQ	SN:1	LN:248956422
-      @SQ	SN:10	LN:133797422
-      @SQ	SN:11	LN:135086622
-
----
-
 ## A brief note on data storage
 
 * **Download promptly from the sequencing facility and store in a secure, clearly labelled and backed-up location**
 
-* **Check file sizes and md5sum before and after transfer to check for corruption during transfer – which can occur!**
+* **Check md5sums before and after transfer to check for corruption during transfer – which can occur!**
 
 ---
 
 ## A brief note on data storage (2)
 
-* **FASTQ files cannot be replaced**
+* **FASTQ files cannot be replaced!**
   
-* **Copy these file to a secure and backed-up location**  
+* **Copy these files to a secure and backed-up location**  
   
 * Typically files are backed up on `/istore` or `/isilon`
   
@@ -221,6 +203,25 @@ table {
 
 ## Mapping output SAM / BAM
 
+* **S**equence **A**lignment / **M**ap – **SAM**
+
+* Compressed version – **BAM**
+
+* Reading BAM files needs **samtools**
+
+* Header lines (chromosomes / mapping parameters):
+
+<br>
+
+      @HD	VN:1.6	SO:coordinate
+      @SQ	SN:1	LN:248956422
+      @SQ	SN:10	LN:133797422
+      @SQ	SN:11	LN:135086622
+
+---
+
+## Mapping output SAM / BAM
+
 * Read alignments (1 read shown below):
 
 
@@ -247,11 +248,11 @@ table {
 
 ## Introducing Nextflow
 
-* Bioinformaticians join software with custom scripts
+* Bioinformaticians "join" software with custom scripts
 
-* Movement to standardise pipelines with **Nextflow** (and Snakemake)
+* Standardise pipelines with **Nextflow** (and Snakemake)
 
-* But, you don’t need to program to be able to run Nextflow
+* You don’t need to program to be able to run Nextflow
   
 * You have to learn Nextflow concepts, but then processing is managed for you
 
@@ -279,9 +280,9 @@ table {
 
 ## Introducing nf-core
 
-* Contributions of a community of developers
+* Community of developers
 
-* Over 50 pipelines (although multiple options)
+* 80+ pipelines
 
 * Large community of users – support, code re-use
 
@@ -326,6 +327,8 @@ table {
 * You should know how to use Linux
 
 * You should know how to submit jobs to a Slurm computer cluster
+
+* Install Nextflow for your own account
  
 ---
 
@@ -337,27 +340,15 @@ table {
 
 ---
 
-## Setting-up Nextflow & nf-core
-
-* We’ve tried to simplify this with a single command to run from a head node:
-  
-      curl -s https://raw.githubusercontent.com/StevenWingett/lmb-nextflow/main/nextflow_setup_cluster.sh | bash
-
-* Downloads and runs a Bash script
-
-* Bash command edits your `~/.bashrc` file and installs Python modules
-
----
-
 ## Tips on running pipelines
 
 * All pipelines are different: read the documentation at nf-core
 
-* Run pipelines in a location with adequate storage (most likely not your home directory)
+* Run pipelines in a location with adequate storage (most likely **not your home directory**)
 
 * Background your pipelines `-bg`
 
-* Every job is assigned a name e.g. clever_brenner
+* Every job is assigned a name e.g. *clever_brenner*
 
 ---
 
@@ -437,7 +428,6 @@ table {
 * Nextflow: a language for building and running pipelines
 * nf-core: a collection of curated bioinformatics pipelines
 * How to run pipelines
-* Find a reason to **have a go** in the coming weeks
 * Thanks for listening!!!
 
 ---
