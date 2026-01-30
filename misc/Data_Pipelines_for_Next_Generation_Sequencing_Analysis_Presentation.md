@@ -52,8 +52,8 @@ theme: uncover
 
 ## Bulk vs single cell
 * Bulk is easier and cheaper to perform
-* Bulk gives global averages
 * Bulk allows comparisons between different samples, tissues etc.
+* But, bulk gives global **averages**
 * Single cell reveals cell heterogeneity
 * Single cell reveals rare cell types and transitions
 
@@ -73,6 +73,8 @@ table {
 | Maximum Output (Gb)	     | 1.2	    | 7.5	    | 15	         | 120	              | 330	                | 6000         |
 | Maximum Reads	           | 4M       | 25M     | 25M	         | 400M		            | 1.1B                |	20B          |
 | Maximum Read Length	(bp) | 2×150	  | 2×150   | 2×300        | 2×150              | 2×150               | 2 x 250      |
+
+![width:250px](../assets/MiSeq-300x225.png)
 
 ---
 
@@ -121,9 +123,9 @@ table {
 
 ---
 
-## Illumina sequencing adapters
+## From *in vitro* to *in silico*
 
-![width:900px](../assets/illumina_sequencing_adapters.png)
+![width:750px](../assets/dna_2_computer.png)
 
 ---
 
@@ -255,6 +257,8 @@ table {
 * You don’t need to program to be able to run Nextflow
   
 * You have to learn Nextflow concepts, but then processing is managed for you
+
+* Best place to run pipelines is the LMB computer cluster
 
 ---
 
