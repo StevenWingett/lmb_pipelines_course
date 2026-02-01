@@ -168,9 +168,11 @@ table {
 
 ## A brief note on data storage
 
-* **Download promptly from the sequencing facility and store in a secure, clearly labelled and backed-up location**
+* Download **promptly** from the sequencing facility
 
-* **Check md5sums before and after transfer to check for corruption during transfer – which can occur!**
+* **Data corruption can occur during transfer!**
+
+* **Check md5sums**
 
 ---
 
