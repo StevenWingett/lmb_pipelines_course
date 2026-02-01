@@ -198,14 +198,23 @@ table {
 
 ---
 
-## Mapping Reads
+## What do I do next?
+
+* FASTQ files need to be analysed
+* What am I trying to do?
+* What software do I need?
+* What output files will be produced?
+
+---
+
+## Data analysis example: mapping reads
 * Converts raw sequence data to genomic positions
 * Each read is mapped to a reference genome
 * Key NGS step in most applications
 
 <br>
 
-![width:1000px](../assets/mapper.svg)
+![width:750px](../assets/mapper.svg)
 
 ---
 
@@ -228,7 +237,7 @@ table {
 
 ---
 
-## Mapping output SAM / BAM
+## Mapping output SAM / BAM (2)
 
 * Read alignments (1 read shown below):
 
@@ -266,11 +275,6 @@ table {
 
 * Best place to run pipelines is the LMB computer cluster
 
----
-
-## Introducing Nextflow (2)
-
-![width:900px](../assets/nf-core-chipseq_pipeline_schematic.png)
 
 ---
 
@@ -325,7 +329,14 @@ table {
 
 ---
 
-## Installed pipelines
+## Introducing nf-core (5)
+
+![width:900px](../assets/nf-core-chipseq_pipeline_schematic.png)
+
+---
+
+
+## Nextflow pipelines on the cluster
 * Downloading FASTQ files + metadata
 * NGS QC
 * RNA-seq
@@ -354,28 +365,6 @@ table {
     https://github.com/StevenWingett/Bioinformatics_Computer_Cluster_Course
   
 ![bg right 90%](https://raw.githubusercontent.com/StevenWingett/Bioinformatics_Computer_Cluster_Course/refs/heads/main/assets/qr-code.png)
-
----
-
-## Tips on running pipelines
-
-* All pipelines are different: read the documentation at nf-core
-
-* Run pipelines in a location with adequate storage (most likely **not your home directory**)
-
-* Background your pipelines `-bg`
-
-* Every job is assigned a name e.g. *clever_brenner*
-
----
-
-## Tips on running pipelines (2)
-
-* You will get an email when the pipeline completes
-  
-* Check the MultiQC report
-  
-* Your aligned files with be BAM format
 
 ---
 
@@ -424,7 +413,9 @@ table {
 
 * Common output data include:
   * Gene expression matrix (RNA-seq)
+
   * Peak positions (ATAC/ChIP-seq, CUT & Tag/Run)
+  
   * IGV file for viewing results
   
 ---
@@ -442,10 +433,14 @@ table {
 ## Summary
 
 * How Illumina sequencing works
+
+* Common sequencing file formats
+  
 * Nextflow: a language for building and running pipelines
+  
 * nf-core: a collection of curated bioinformatics pipelines
+  
 * How to run pipelines
-* Thanks for listening!!!
 
 ---
 
@@ -454,3 +449,5 @@ table {
 * https://stevenwingett.github.io/lmb_pipelines_course
 
 ![bg right 90%](../assets/lmb_pipelines_course_qr-code.png)
+
+* Thanks for listening!!!
