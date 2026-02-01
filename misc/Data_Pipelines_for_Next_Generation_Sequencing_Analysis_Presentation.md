@@ -78,6 +78,12 @@ table {
 
 ---
 
+## Illumina sequencing construct
+
+![width:900px](../assets/illumina_sequencing_adapters.png)
+
+---
+
 ##### Illumina sequencing process - cluster generation
 
 ![bg right 100% Image courtesy of Abizar, Wikipedia](../assets/DNA_Sequencing_Bridge_Amplification.png)  
@@ -264,6 +270,13 @@ table {
 
 ## Introducing Nextflow (2)
 
+![width:900px](../assets/nf-core-chipseq_pipeline_schematic.png)
+
+---
+
+
+## Introducing Nextflow (3)
+
 * You don’t need to submit Nextflow jobs as `sbatch`
 
 * Run Nextflow on a head node 
@@ -298,7 +311,7 @@ table {
 
 ---
 
-## Introducing nf-core (2)
+## Introducing nf-core (4)
 
 * Events – tutorials, seminars, hackathons
 
