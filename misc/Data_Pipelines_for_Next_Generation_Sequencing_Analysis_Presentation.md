@@ -303,6 +303,8 @@ table {
 
 ## Introducing nf-core
 
+* Stop "reinventing the wheel"
+
 * Community of developers
 
 * 80+ pipelines
@@ -320,6 +322,8 @@ table {
 ## Introducing nf-core (4)
 
 * Events – tutorials, seminars, hackathons
+
+* Reproducible
 
 * Used at other institutions
 
@@ -362,7 +366,7 @@ table {
  
 ---
 
-* If you do not meet these requirements, try our LMB Computer Cluster Course: 
+* If you do not meet these requirements, try our **LMB Computer Cluster Course**: 
  
     https://github.com/StevenWingett/Bioinformatics_Computer_Cluster_Course
   
@@ -386,7 +390,7 @@ table {
 
 * http://guidepiper
 
-<img align="right" height="200" src="assets/guide_piper_logo.png">
+<img align="right" height="200" src="../assets/guide_piper_logo.png">
 
 
 ---
@@ -437,6 +441,8 @@ table {
 * How Illumina sequencing works
 
 * Common sequencing file formats
+
+* Software and pipelines
   
 * Nextflow: a language for building and running pipelines
   
