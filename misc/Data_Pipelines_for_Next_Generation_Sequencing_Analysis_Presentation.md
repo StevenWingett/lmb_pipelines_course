@@ -109,7 +109,7 @@ table {
 
 ## Useful NGS terminology
 
-* Paired-end / single end
+* Single-end / paired-end
   <br>
 ![width:900px](../assets/single_paired_end_sequencing.png)
 
@@ -257,7 +257,7 @@ table {
 ---
 
 ## NGS bioinformatics processing
-* NGS datasets require multiple independently developed to evaluate the data
+* NGS datasets require multiple independently developed tools to evaluate the data
 
 * Data needs to flow from one tool another
 
@@ -267,7 +267,7 @@ table {
 
 ## Introducing Nextflow
 
-* Bioinformaticians "join" software with custom scripts
+* Bioinformaticians join software with custom scripts
 
 * Standardise pipelines with **Nextflow** (and Snakemake)
 
